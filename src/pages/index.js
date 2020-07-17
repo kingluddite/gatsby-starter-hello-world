@@ -1,5 +1,13 @@
-import React from "react"
+import React from 'react';
+import Layout from '../components/layout';
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    <Layout>
+      <h1>Home</h1>
+      <div>
+        <a href="https://cnn.com">CNN</a>
+      </div>
+    </Layout>
+  );
 }
