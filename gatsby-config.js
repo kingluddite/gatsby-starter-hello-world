@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-eslint',
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-shart`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
