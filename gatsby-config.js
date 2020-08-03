@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Learn Gatsby',
@@ -29,6 +33,15 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `833fz2zdr4ma`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        // accessToken: `Dp8TngGeJXm1ElHMAtx1y1jL7vJjSOs7cUc6PRYddVA`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
