@@ -1,11 +1,40 @@
 .page {
-  background: yellow;
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  text-transform: capitalize;
 }
 
-.page h1 {
-  color: red;
+.page span {
+  margin-left: 2rem;
+  color: grey;
 }
 
-.text {
-  text-transform: uppercase;
+.page article {
+  margin: 2rem 0;
+}
+
+.page div {
+  height: 15rem;
+}
+
+@media screen and (min-width: 768px) {
+  .page {
+    display: grid;
+
+    /* two column layout starting from 768px */
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page {
+    /* display: grid; WE DON'T NEED THIS BECAUSE WE ALREADY HAVE IT ON SMALL SCREEN */
+
+    /* three  column layout starting from 992px */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* column-gap: 2rem; WE DON'T NEED THIS BECAUSE WE ALREADY HAVE IT ON SMALL SCREEN */
+  }
 }
